@@ -38,7 +38,7 @@ module "ec2_instances" {
   ami                    = "ami-013f17f36f8b1fefb"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [module.vpc.default_security_group_id]
-  subnet_id              = module.vpc.public_subnets[0]
+  subnet_id              = module.vpc.private_subnets[0]
 
   tags = {
     Terraform   = "true"
