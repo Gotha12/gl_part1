@@ -34,7 +34,8 @@ module "ec2_instances" {
 
   name           = "GlobalLogicServer"
   instance_count = 2
-
+ 
+  #This AMI belongs to ubuntu server.    
   ami                    = "ami-013f17f36f8b1fefb"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [module.vpc.default_security_group_id]
